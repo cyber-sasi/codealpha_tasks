@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Register | SecureReview Demo{% endblock %}
+{% block content %}
+  <h2>Create a demo account</h2>
+  {% if message %}<p role="status">{{ message }}</p>{% endif %}
+  <form method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+    <label>Username <input name="username" minlength="3" maxlength="32" pattern="[A-Za-z0-9_]{3,32}" required></label><br>
+    <label>Password <input name="password" type="password" minlength="12" maxlength="128" required></label><br>
+    <button type="submit">Register</button>
+  </form>
+{% endblock %}

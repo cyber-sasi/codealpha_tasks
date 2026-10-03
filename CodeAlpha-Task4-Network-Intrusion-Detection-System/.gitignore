@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+nids_events.sqlite3
+*.sqlite
+*.sqlite3
+*-wal
+*-shm
+*.db
+*.csv
+*.jsonl
+*.json
+!rules/rules.json
+*.log
+.coverage
+reports/generated/

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}SecureReview Demo{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <h1>SecureReview Demo</h1>
+    <nav aria-label="Main navigation">
+      <a href="{{ url_for('index') }}">Home</a> |
+      <a href="{{ url_for('register') }}">Register</a> |
+      <a href="{{ url_for('login') }}">Login</a> |
+      <a href="{{ url_for('profile') }}">Profile</a> |
+      <a href="{{ url_for('search') }}">Search</a> |
+      <a href="{{ url_for('feedback') }}">Feedback</a> |
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>

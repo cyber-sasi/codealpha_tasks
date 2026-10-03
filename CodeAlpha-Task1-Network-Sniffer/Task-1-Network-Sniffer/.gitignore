@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.pcap
+*.pcapng
+*.csv
+*.json
+!examples/*.json
+.pytest_cache/
+.coverage
+.DS_Store
+Thumbs.db

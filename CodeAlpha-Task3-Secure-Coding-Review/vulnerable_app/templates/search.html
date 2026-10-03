@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Search | SecureReview Demo{% endblock %}
+{% block content %}
+  <h2>Search demo users</h2>
+  <form method="get">
+    <label>Username contains <input name="q" value="{{ request.args.get('q', '') }}"></label>
+    <button type="submit">Search</button>
+  </form>
+  {{ results_html }}
+{% endblock %}

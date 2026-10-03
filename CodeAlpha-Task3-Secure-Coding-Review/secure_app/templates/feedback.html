@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Feedback | SecureReview Demo{% endblock %}
+{% block content %}
+  <h2>Feedback</h2>
+  {% if message %}<p role="status">{{ message }}</p>{% endif %}
+  <form method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+    <label>Message <textarea name="message" maxlength="1000" required></textarea></label><br>
+    <button type="submit">Send feedback</button>
+  </form>
+{% endblock %}
